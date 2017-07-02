@@ -16,6 +16,7 @@
         <module>atom-admin</module>
         <module>circuit-client</module>
         <module>circuit-server</module>
+        <module>circuit-turbine</module>
     </modules>
 
     <properties>
