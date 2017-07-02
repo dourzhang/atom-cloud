@@ -13,8 +13,9 @@
         <module>config-client</module>
         <module>eureka-server</module>
         <module>eureka-client</module>
-        <module>atom-admin-server</module>
         <module>atom-admin</module>
+        <module>circuit-client</module>
+        <module>circuit-server</module>
     </modules>
 
     <properties>
