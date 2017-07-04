@@ -19,6 +19,7 @@
         <module>circuit-turbine</module>
         <module>ribbon-server</module>
         <module>ribbon-client</module>
+        <module>feign-client</module>
     </modules>
 
     <properties>
