@@ -20,6 +20,8 @@
         <module>ribbon-server</module>
         <module>ribbon-client</module>
         <module>feign-client</module>
+        <module>zuul-client</module>
+        <module>zuul-gateway</module>
     </modules>
 
     <properties>
