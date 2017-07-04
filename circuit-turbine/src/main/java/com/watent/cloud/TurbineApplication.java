@@ -13,8 +13,8 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
  */
 //@EnableTurbineStream
 @EnableTurbine
-@EnableDiscoveryClient
 @EnableHystrixDashboard
+@EnableDiscoveryClient
 @SpringBootApplication
 public class TurbineApplication {
 
