@@ -3,8 +3,8 @@ package com.watent.cloud;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,9 +16,10 @@ import org.springframework.web.client.RestTemplate;
  * <p>
  * Created by Atom on 2017/7/4.
  */
+@EnableDiscoveryClient
 @RestController
 @SpringBootApplication
-@RibbonClient(name = "ribbon-server", configuration = ClientConfiguration.class)
+//@RibbonClient(name = "ribbon-server", configuration = ClientConfiguration.class)
 public class RibbonClientApplication {
 
     @LoadBalanced

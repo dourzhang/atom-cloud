@@ -8,7 +8,6 @@ import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.PingUrl;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 
 /**
@@ -18,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
  * <p>
  * Created by Atom on 2017/7/4.
  */
-@Configuration
+//@Configuration
 public class ClientConfiguration {
 
 //    @Autowired
@@ -28,6 +27,7 @@ public class ClientConfiguration {
     @ConditionalOnMissingBean
     public IClientConfig ribbonClientConfig() {
         DefaultClientConfigImpl config = new DefaultClientConfigImpl();
+//        config.loadDefaultValues();
         config.loadProperties("ribbon-client");
         return config;
     }
