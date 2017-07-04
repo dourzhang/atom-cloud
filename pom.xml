@@ -17,6 +17,8 @@
         <module>circuit-client</module>
         <module>circuit-server</module>
         <module>circuit-turbine</module>
+        <module>ribbon-server</module>
+        <module>ribbon-client</module>
     </modules>
 
     <properties>
