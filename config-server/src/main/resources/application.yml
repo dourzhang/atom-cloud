@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    root: info
+  file: config-server.log
+
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: config-server
+  kafka:
+    host: localhost
+    port: 5672
+    username: user
+    password: secret
