@@ -26,13 +26,17 @@ cloud-bus
     </dependency>
 ### application.yml
     spring:
-      application:
-        name: config-server
-      kafka:
-        host: localhost
-        port: 5672
-        username: user
-        password: secret
+     application:
+       name: config-server
+     kafka:
+       host: localhost
+       port: 5672
+       username: user
+       password: secret
+     cloud:
+       bus:
+         trace:
+           enabled: true
 
 ### operate
     start config-server bus-client bus-client-2
@@ -49,6 +53,7 @@ cloud-bus
     update single project cfg
     http://localhost:8888/bus/refresh?destination=bus-client:8060
     
+   
   
 ## note:
     Spring Boot sets the ID for you in the ContextIdApplicationContextInitializer to a combination of the spring.application.name, active profiles and server.port by default.
