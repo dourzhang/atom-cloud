@@ -23,6 +23,11 @@
         <module>zuul-client</module>
         <module>zuul-gateway</module>
         <module>bus-client</module>
+        <module>zipkin-server</module>
+        <module>zipkin-trace</module>
+        <module>zipkin-client</module>
+        <module>atom-sleuth</module>
+        <module>atom-zipkin</module>
     </modules>
 
     <properties>
