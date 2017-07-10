@@ -61,9 +61,10 @@ zipkin with stream
 
               
 ### Java
-    @EnableZipkinStreamServer
-    @SpringBootApplication
-    @MessageEndpoint
+    Application
+        @EnableZipkinStreamServer
+        @SpringBootApplication
+        @MessageEndpoint
     
 ### op
     start zipkin-server zipkin-client zipkin-stream
