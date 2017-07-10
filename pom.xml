@@ -28,6 +28,7 @@
         <module>zipkin-client</module>
         <module>atom-sleuth</module>
         <module>atom-zipkin</module>
+        <module>zipkin-stream</module>
     </modules>
 
     <properties>

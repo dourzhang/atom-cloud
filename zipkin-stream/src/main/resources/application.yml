@@ -1,0 +1,63 @@
+server:
+  port: 9411
+
+logging:
+  level:
+    root: info
+  file: zipkin-stream.log
+
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zkNodes: localhost:2181
+---
+
+spring:
+  application:
+    name: zipkin-stream
+  datasource:
+    schema: classpath:/mysql.sql
+    url: jdbc:mysql://localhost:9406/zipkin-stream?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    # Switch this on to create the schema on startup:
+    initialize: true
+    continueOnError: true
+  sleuth:
+    enabled: false
+
+# default is mem (in-memory)
+zipkin:
+  storage:
+    type: mysql
+
+---
+#spring:
+#  sleuth:
+#    enabled: true
+#  zipkin:
+#    enabled: false
+#
+#spring:
+#  profiles: mysql
+#  datasource:
+#    schema: classpath:/mysql.sql
+#    url: jdbc:mysql://localhost:9406/zipkin-stream?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    password: 123456
+## Switch this on to create the schema on startup:
+#    initialize: true
+#    continueOnError: true
+#    type: org.apache.commons.dbcp.BasicDataSource
+#  sleuth:
+#    enabled: false
+#
+#zipkin:
+#  storage:
+#    type: mysql # default is mem (in-memory)

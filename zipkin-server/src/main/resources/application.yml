@@ -1,0 +1,29 @@
+server:
+  port: 9060
+spring:
+  application:
+    name: zipkin-server
+
+logging:
+  level:
+    root: info
+  file: ${spring.application.name}.log
+
+management:
+  security:
+    enabled: false
+
+---
+# Url
+#spring:
+#  zipkin:
+#    base-url: http://localhost:9411
+
+# Stream
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zkNodes: localhost:2181

@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.sleuth.sampler.AlwaysSampler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,7 +39,7 @@ public class ZipkinServerApplication {
     @RequestMapping("/test")
     public String callHome() {
         logger.info("hi calling zipkin-client  ");
-        return restTemplate.getForObject("http://localhost:8080/up", String.class);
+        return restTemplate.getForObject("http://localhost:8060/up", String.class);
     }
 
     @RequestMapping("/ok")

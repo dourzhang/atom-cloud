@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.sleuth.sampler.AlwaysSampler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,9 +46,9 @@ public class ZipkinClientApplication {
         return new RestTemplate();
     }
 
-    @Bean
-    public AlwaysSampler defaultSampler() {
-        return new AlwaysSampler();
-    }
+//    @Bean
+//    public AlwaysSampler defaultSampler() {
+//        return new AlwaysSampler();
+//    }
 
 }
