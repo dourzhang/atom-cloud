@@ -62,7 +62,7 @@ zipkin with stream
               
 ### Java
     @EnableZipkinStreamServer
-    @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+    @SpringBootApplication
     @MessageEndpoint
     
 ### op

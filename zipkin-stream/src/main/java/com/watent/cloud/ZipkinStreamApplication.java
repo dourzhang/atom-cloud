@@ -29,7 +29,6 @@ import java.util.List;
  * Created by Atom on 2017/7/7.
  */
 @EnableZipkinStreamServer
-//@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @MessageEndpoint
 @SpringBootApplication
 public class ZipkinStreamApplication {
